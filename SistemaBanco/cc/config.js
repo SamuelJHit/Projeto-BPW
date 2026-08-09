@@ -7,12 +7,6 @@ function cadastrar() {
     const campoEmail = document.getElementById('inputemail');
     const campoTelefone = document.getElementById('inputtelefone');
 
-    if (!campoNome.value || !campoEmail.value || !campoTelefone.value) {
-    alert("Preencha todos os campos!");
-    return;
-  }
-
-
     const login = {
         nomeC: campoNome.value.trim(),
         cpfC: campoCpf.value.trim(),
@@ -43,9 +37,16 @@ function cadastrar() {
 
     if (erros.length > 0) {
         alert("Ops! Por favor, caprice no preenchimento do formulário.")
+        return;
     }
 
     listaContatos.push(login);
+
+    localStorage.setItem('login', JSON.stringify({ 
+        nomeC: login.nomeC, 
+        EmailC: login.EmailC, 
+        TelefoneC: login.TelefoneC 
+    }));
 
     campoNome.value = '';
     campoNascimento.value = '';
@@ -53,5 +54,7 @@ function cadastrar() {
     campoCpf.value = '';
     campoTelefone.value = '';
 
-console.log(listaContatos);
+    console.log(listaContatos);
+    alert("login realizado!")
+    window.location.href = 'pagina.html';
 }
