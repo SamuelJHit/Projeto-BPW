@@ -1,0 +1,131 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI, Roboto, Helvetica Neve', sans-serif;
+}
+/* cabeçalho */
+
+.container-head {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2 );
+}
+
+.box {
+
+    color: blue;
+}
+
+.topo {
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 0;
+    left: 7.3%;
+    width: 1265.9px;
+    height: 50px;
+    background: blue;
+    box-shadow: 0 10px 25px -5px rgba( 0, 0, 0, 0.05), 0 8px 10px -6px rgba( 0, 0, 0, 0.02);;
+}
+
+.logo h3{
+    font-size: 24px;
+}
+
+.titulo {
+    font-size: 28px;
+}
+
+/* body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 10vh;
+    background-color: rgb(224, 245, 247);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* main */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+}
+
+.buttonII {
+    background-color: rgb(227, 227, 255);
+    color: blue;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buttonII:hover{
+    background-color: rgb(31, 31, 221);
+    color: #fff;
+}
+
+/* box login */
+.boxLogin {
+    background: white;
+    
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* input group */
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    bottom: 10px;
+}
