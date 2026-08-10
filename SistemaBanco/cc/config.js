@@ -56,3 +56,8 @@ function cadastrar() {
 
     window.location.href = '/SistemaBanco/pagina.html';
 }
+
+function cadastrosen() {
+    alert("Ops! Por favor, cadastre sua conta.");
+    window.location.href = 'cc/cc.html';
+}
