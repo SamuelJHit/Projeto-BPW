@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank</title>
     <link rel="stylesheet" href="pagina.css">
+    <link rel="javasheet" href="cc/config.js">
 </head>
 <body>
     <div>
@@ -16,7 +17,21 @@
     </div>
 
     <main class="main-content">
+        <div class="quadro">
+            <h1 id="mensagem">`Teste</h1>
+        </div>
         
+    <script src="cc/config.js"></script>
+
+    
+    <script>
+        let login = localStorage.getItem("login");
+        
+        if (login) {
+            login = JSON.parse(login);
+            document.getElementById("mensagem").innerText = `Seja bem vindo! ${login.nomeC}`;
+        }
+    </script>
     </main>
 
     <footer>

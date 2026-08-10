@@ -17,21 +17,21 @@ function cadastrar() {
 
     const erros = [];
 
-    if(nomeC === '') {
+    if(login.nomeC === '') {
         erros.push('O campo nome não pode ficar em branco.');
-    } else if (nomeC.length < 3) {
+    } else if (login.nomeC.length < 3) {
         erros.push('Caprice no NOME! Digite ao menos 6 caracteres.')
     }
 
-    if(EmailC === '') {
+    if(login.EmailC === '') {
         erros.push('O campo nome não pode ficar em branco.');
-    } else if (EmailC.length < 3) {
+    } else if (login.EmailC.length < 3) {
         erros.push('Caprice no EMAIL! Digite ao menos 6 caracteres.')
     }
 
-    if(TelefoneC === '') {
+    if(login.TelefoneC === '') {
         erros.push('O campo nome não pode ficar em branco.');
-    } else if (TelefoneC.length < 3) {
+    } else if (login.TelefoneC.length < 3) {
         erros.push('Caprice no TELEFONE! Digite ao menos 6 caracteres.')
     }
 
@@ -42,11 +42,7 @@ function cadastrar() {
 
     listaContatos.push(login);
 
-    localStorage.setItem('login', JSON.stringify({ 
-        nomeC: login.nomeC, 
-        EmailC: login.EmailC, 
-        TelefoneC: login.TelefoneC 
-    }));
+    localStorage.setItem('login', JSON.stringify(login));
 
     campoNome.value = '';
     campoNascimento.value = '';
@@ -55,6 +51,8 @@ function cadastrar() {
     campoTelefone.value = '';
 
     console.log(listaContatos);
-    alert("login realizado!")
-    window.location.href = 'pagina.html';
+    alert("Login realizado com sucesso!");
+
+
+    window.location.href = '/SistemaBanco/pagina.html';
 }
