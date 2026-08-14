@@ -22,7 +22,7 @@ app.get('/', (request: Request, response: Response) => {
   });
 });
 
-app.get('/users', (Request: Request, response: Response) => {
+app.get('/users', (request: Request, response: Response) => {
 
   // retornar os dados da classe
   const user = new User('Samuel', 'samuelj@example.com', '123');
