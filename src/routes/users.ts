@@ -4,6 +4,14 @@ import { User } from "../models/user"
 
 const usersRoutes = Router()
 
+usersRoutes.get('/', (request, response) => {
+    response.json({
+        message: 'Lista de usuários'
+    });
+});
+
+export default usersRoutes;
+
 const users: User[] = []
 const user = new User('SamuelJ', 'samuelj@gmail.com', '123')
 

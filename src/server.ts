@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
-import usersRoutes from './routes/users';
+import usersRoutes from './routes/users;
 import { User } from './models/user';
 
 const app = express();
