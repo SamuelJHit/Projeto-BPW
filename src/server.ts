@@ -1,5 +1,6 @@
+import dotenv from 'dotenv'
 import express, { Request, Response } from 'express';
-
+import usersRoutes from './routes/users';
 import { User } from './models/user';
 
 const app = express();
@@ -7,7 +8,7 @@ const port = 3000;
 app.use(express.urlencoded({extended: true }))
 app.use(express.json());
 
-app.get('/', (Request: Request, response: Response) => {
+app.get('/', (request: Request, response: Response) => {
 
   // retornar os dados da classe
   const user = new User('Samuel', 'samuelj@example.com', '123');
@@ -38,6 +39,10 @@ app.get('/users', (Request: Request, response: Response) => {
   });
 
 });
+
+app.use('/v1', [
+  usersRoutes,
+])
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
