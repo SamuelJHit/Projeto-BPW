@@ -1,10 +1,10 @@
-import { Request, Response } from 'express'
-import { Router } from "express"
-import { User } from "../models/user"
+import { Request, Response } from 'express';
+import { Router } from "express";
+import { User } from "../models/user";
 
 const usersRoutes = Router()
 
-usersRoutes.get('/', (request, response) => {
+usersRoutes.get('/', (request: Request, response: Response) => {
     response.json({
         message: 'Lista de usuários'
     });
