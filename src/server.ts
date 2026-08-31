@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
 import usersRoutes from './routes/users';
 import { User } from './models/user';
+import bankRoutes from './routes/bank'; // bank criado
 
 const app = express();
 const port = 3000;
@@ -39,10 +40,10 @@ app.get('/users', (request: Request, response: Response) => {
   });
 
 });
-
-app.use('/v1', [
-  usersRoutes,
-])
+// encaminhar para o bank
+app.use('/v1/bank', 
+  bankRoutes
+)
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
